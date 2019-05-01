@@ -18,7 +18,7 @@ Packages necessari sono:
 ## Data
 Il dataset usato per gli esperimenti è accessibile da [__NSL-KDD__](https://www.unb.ca/cic/datasets/nsl.html). 
 Il dataset originale (con classificazione a 5 classi) è stato trasformato in un dataset binario con due classificazioni: "_attack_, _normal_" (_oneCls files) and then the  feature  selection  stage  is  performed  by  retain  the  10top-ranked  features  according  to  __Information  Gain(IG)__ .
-Inoltre, delle 41 features originali il dataset contenuto nella cartella dataset del progetto sono state selezionate 10 features.
+Inoltre, delle 41 features originali il dataset contenuto nella cartella dataset del progetto sono state selezionate 10 features, che dventano 89 dopo le fasi di preprocessing
 
 ##Descrizione del codice
 Lo script contiene il codice utile per:
@@ -28,8 +28,15 @@ Lo script contiene il codice utile per:
   * Uso dela libreria Standard Scale
 2. Crea un autoencoder con 60-30-10 neuroni rispettivamente per la parte di encoder e 30-60 per la parte di decoder e lo addestra sul dataset di training
 ![Layers autoencoder model](https://github.com/giusy123/MIDS/blob/master/autoencoder.png)
-3. Salva i pesi dell'autoencoder precedentemente appreso. I due livelli dell'encoder con i pesi fissati diventano i  primi due livelli, a cui è aggiunto un ultimo livello con fuzione __softmax__ di un modello che classifica attacchi da non attacchi
-##Come usare lo script
+3. Salva i pesi dell'autoencoder precedentemente appreso. I primi tre livelli della parte relativa all'encoder con i pesi fissati diventano i  primi due livelli, a cui è aggiunto un ultimo livello con fuzione __softmax__ di un modello che classifica attacchi da non attacchi.
+![Layers classification model](https://github.com/giusy123/MIDS/blob/master/classifier.png)
+4. Il modello è poi usato con funzione di predizione sul testing set per valutarne l'accuratezza del modello
 
+##Come usare lo script
+Lo script richiede in input:
+* La cartella in cui si trova il dataset (la cartella dataset è già fornita nel repository)
+* Il nome del dataset (sugg. KDDTrain.csv è il dataset fornito con il codice)
+* Il path della cartella dove salvare i plot
+* La percentuale in cui splittare il dataset tra training set e testing set (il codice prende in input un valore tra 0.1 e 0.5)
 
 ## How to use
