@@ -1,6 +1,6 @@
 # Machine learning for Intrusion Detection System (MIDS)
 
-Il repository contiene l'implementazione di una Deep Neural Networks (DNN): classificatore di un dataset di eventi di attacco e normali  
+Il repository contiene l'implementazione di una Deep Neural Networks (DNN):  un intrusion detection system in grado di identificare attacchi.  
 
 ## Requisiti del codice
 
@@ -33,6 +33,7 @@ Lo script contiene il codice utile per:
 3. Salva i pesi dell'autoencoder precedentemente appreso. I primi tre livelli della parte relativa all'encoder con i pesi fissati diventano i  primi due livelli, a cui è aggiunto un ultimo livello con fuzione __softmax__ di un modello che classifica attacchi da non attacchi.
 
 ![Layers classification model](https://github.com/giusy123/MIDS/blob/master/classifier.png)
+
 4. Il modello è poi usato con funzione di predizione sul testing set per valutarne l'accuratezza del modello
 
 ## Come usare lo script
