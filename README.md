@@ -27,16 +27,20 @@ Lo script contiene il codice utile per:
   * One-hot encoding per trasforma le features categoriche 
   * Uso dela libreria Standard Scale
 2. Crea un autoencoder con 60-30-10 neuroni rispettivamente per la parte di encoder e 30-60 per la parte di decoder e lo addestra sul dataset di training
+
 ![Layers autoencoder model](https://github.com/giusy123/MIDS/blob/master/autoencoder.png)
+
 3. Salva i pesi dell'autoencoder precedentemente appreso. I primi tre livelli della parte relativa all'encoder con i pesi fissati diventano i  primi due livelli, a cui è aggiunto un ultimo livello con fuzione __softmax__ di un modello che classifica attacchi da non attacchi.
+
 ![Layers classification model](https://github.com/giusy123/MIDS/blob/master/classifier.png)
 4. Il modello è poi usato con funzione di predizione sul testing set per valutarne l'accuratezza del modello
 
-##Come usare lo script
+## Come usare lo script
 Lo script richiede in input:
-* La cartella in cui si trova il dataset (la cartella dataset è già fornita nel repository)
-* Il nome del dataset (sugg. KDDTrain.csv è il dataset fornito con il codice)
-* Il path della cartella dove salvare i plot
-* La percentuale in cui splittare il dataset tra training set e testing set (il codice prende in input un valore tra 0.1 e 0.5)
 
-## How to use
+* La cartella in cui si trova il dataset, usare dataset (la cartella dataset è già fornita nel repository)
+* Il nome del dataset (sugg. KDDTrain.csv è il dataset fornito con il codice)
+* Il path della cartella dove salvare i plot (la cartella plot è già fornita con il repository)
+* La percentuale in cui splittare il dataset tra training set e testing set (il codice accetta in input un valore tra 0.1 e 0.5)
+
+
