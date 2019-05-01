@@ -20,7 +20,7 @@ Il dataset usato per gli esperimenti è accessibile da [__NSL-KDD__](https://www
 Il dataset originale (con classificazione a 5 classi) è stato trasformato in un dataset binario con due classificazioni: "_attack_, _normal_" (_oneCls files) and then the  feature  selection  stage  is  performed  by  retain  the  10top-ranked  features  according  to  __Information  Gain(IG)__ .
 Inoltre, delle 41 features originali il dataset contenuto nella cartella dataset del progetto sono state selezionate 10 features, che dventano 89 dopo le fasi di preprocessing
 
-##Descrizione del codice
+## Descrizione del codice
 Lo script contiene il codice utile per:
 1. Fase di preprocessing: 
   * Trasforma da categoriche a numeriche le categorie target del dataset: attacco=0; normale=1
