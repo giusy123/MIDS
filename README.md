@@ -11,9 +11,9 @@ Packages necessari sono:
 * [Keras 2.2.4](https://github.com/keras-team/keras) 
 * [Matplotlib 3.0.3](https://matplotlib.org/)
 * [Numpy 1.15.4](https://www.numpy.org/)
-* [Pandas 0.24.2] (https://pandas.pydata.org/)
+* [Pandas 0.24.2](https://pandas.pydata.org/)
 * [Scikit-learn](https://scikit-learn.org/stable/)
-* [Seaborn 0.9.0] (https://seaborn.pydata.org/)
+* [Seaborn 0.9.0](https://seaborn.pydata.org/)
 
 ## Data
 Il dataset usato per gli esperimenti è accessibile da [__NSL-KDD__](https://www.unb.ca/cic/datasets/nsl.html). 
@@ -23,11 +23,12 @@ Inoltre, delle 41 features originali il dataset contenuto nella cartella dataset
 ##Descrizione del codice
 Lo script contiene il codice utile per:
 1. Fase di preprocessing: 
-  *Trasforma da categoriche a numeriche le categorie target del dataset: attacco=0; normale=1
+  * Trasforma da categoriche a numeriche le categorie target del dataset: attacco=0; normale=1
   * One-hot encoding per trasforma le features categoriche 
   * Uso dela libreria Standard Scale
-2. Crea un autoencoder con 60-30-10 neuroni rispettivamente per la parte di encoder e 30-60 per la parte di decoder
+2. Crea un autoencoder con 60-30-10 neuroni rispettivamente per la parte di encoder e 30-60 per la parte di decoder e lo addestra sul dataset di training
 ![Layers autoencoder model](https://github.com/giusy123/MIDS/blob/master/autoencoder.png)
+3. Salva i pesi dell'autoencoder precedentemente appreso. I due livelli dell'encoder con i pesi fissati diventano i  primi due livelli, a cui è aggiunto un ultimo livello con fuzione __softmax__ di un modello che classifica attacchi da non attacchi
 ##Come usare lo script
 
 
