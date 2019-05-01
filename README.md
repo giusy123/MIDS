@@ -1,6 +1,6 @@
 # Machine learning for Intrusion Detection System (MIDS)
 
-Il repository contiene l'implementazione di una Deep Neural Networks (DNN):  un intrusion detection system in grado di identificare attacchi.  
+Il repository contiene l'implementazione di una Deep Neural Networks (DNN) per classificare esempi di attacchi da comportamenti normali
 
 ## Requisiti del codice
 
